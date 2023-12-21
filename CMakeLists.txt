@@ -11,4 +11,4 @@ add_executable(graph_puzzle_game_ykptn
         Graph.cpp
         Graph.h
         Reader.cpp
-        Reader.h Queue.h Queue.cpp Element.cpp)
+        Reader.h Queue.h Queue.cpp Element.cpp Path.cpp Path.h MinHeap.cpp MinHeap.h Heap.cpp Heap.h HeapNode.cpp HeapNode.h)
