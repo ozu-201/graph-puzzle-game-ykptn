@@ -10,6 +10,7 @@
 #include "Heap.h"
 #include "MinHeap.h"
 #include "HeapNode.h"
+#include "Edge.h"
 #include <string>
 #include <vector>
 
@@ -17,6 +18,7 @@ namespace array {
     class Graph : public AbstractGraph {
     private:
         int **edges;
+
         std::vector<std::string> words;
     public:
         explicit Graph(int vertexCount);
@@ -28,8 +30,16 @@ namespace array {
         void addEdge(int from, int to, int weight);
 
         void addWord(const std::string& word);
+
+        int getIndex(const std::string& word);
+
+        std::vector<std::string> shortestPath(const std::string& start, const std::string& end);
     protected:
+        void depthFirstSearch(bool* visited, int fromNode);
+
         void breadthFirstSearch(bool* visited, int startNode);
+
+        Edge* edgeList(int& edgeCount);
 
         Path* dijkstra(int source);
     };

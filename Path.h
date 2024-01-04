@@ -16,6 +16,7 @@ public:
     int getDistance() const;
     void setDistance(int _distance);
     void setPrevious(int _previous);
+    int getPrevious() const;
 };
 
 
